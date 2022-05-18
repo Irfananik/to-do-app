@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './Footer';
 import Home from './Pages/Home';
 import Navbar from './Pages/Navbar';
 import RequireAuth from './Pages/RequireAuth';
@@ -19,6 +20,7 @@ function App() {
           </RequireAuth>
         }></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
