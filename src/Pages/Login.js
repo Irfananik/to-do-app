@@ -11,12 +11,18 @@ const Login = () => {
 
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth)
 
+    let loginError
+
     if(user){
         navigate(from, { replace: true })
     }
 
     if(loading){
         return <Loading/>
+    }
+
+    if(error){
+        loginError = <p className="text-red-500">{error?.message}</p>
     }
 
     return (
@@ -31,6 +37,7 @@ const Login = () => {
                     <div className="card-actions">
                         <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-secondary">Login with Google</button>
                     </div>
+                    {loginError}
                 </div>
             </div>
         </div>
