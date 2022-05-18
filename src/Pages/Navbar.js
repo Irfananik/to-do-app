@@ -26,7 +26,7 @@ const Navbar = () => {
                         <li>{user ? <button class="btn btn-ghost" onClick={logout}>SignOut</button> : <Link to='/'>Login</Link>}</li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a class="btn btn-ghost normal-case text-xl">ToDo-App</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
